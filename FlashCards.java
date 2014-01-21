@@ -7,7 +7,11 @@ import java.util.Scanner;
 public class FlashCards {
 	private final static Scanner scanner = new Scanner(System.in);
 	private static String name = "";
+	private static int score = 0;
 	
+	/**
+	 * Prints the main menu
+	 */
 	private final static void mainMenu() {
 		System.out.println(", please choose a game mode:");
 		System.out.println();
@@ -18,7 +22,43 @@ public class FlashCards {
 		System.out.print("    > ");
 	}
 	
+	/**
+	 * Prints the borders for the header
+	 * 
+	 * @param top
+	 * @param length
+	 */
+	private final static void doLine(boolean top, int length) {
+		if(top) {
+			System.out.print("╔");
+		} else {
+			System.out.print("╚");
+		}
+		for(int i = 2; i < length; i++) {
+			System.out.print("═");
+		}
+		if(top) {
+			System.out.println("╗");
+		} else {
+			System.out.println("╝");
+		}
+	}
+	
+	/**
+	 * The main loop
+	 * 
+	 * @param gameMode
+	 */
 	private final static void loop(int gameMode) {
+		String header = "║ Score: " + score + " ║";
+		
+		// Print header
+		System.out.println();
+		System.out.println();
+		doLine(true, header.length());
+		System.out.println(header);
+		doLine(false, header.length());
+		
 		switch(gameMode) {
 		case 1:
 			System.out.println(1);
@@ -61,8 +101,6 @@ public class FlashCards {
 				System.out.print("Sorry... Try that again");
 			}
 		}
-		
-		System.out.println();
 		
 		// Starts the main loop
 		loop(gameMode);
