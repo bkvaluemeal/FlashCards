@@ -50,13 +50,15 @@ public class FlashCards {
 		while(gameMode < 1 || gameMode > 3) {
 			mainMenu();
 			
-			try{
+			try {
 				gameMode = Integer.parseInt(scanner.nextLine());
-			} finally {
-				if(gameMode < 1 || gameMode > 3) {
-					System.out.println();
-					System.out.print("Sorry... Try that again");
-				}
+			} catch(Exception e) {
+				
+			}
+			
+			if(gameMode < 1 || gameMode > 3) {
+				System.out.println();
+				System.out.print("Sorry... Try that again");
 			}
 		}
 		
