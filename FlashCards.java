@@ -37,7 +37,10 @@ public class FlashCards {
 		
 		// Gets user's name
 		System.out.print("Enter your name: ");
-		name = scanner.nextLine();
+		name = scanner.nextLine().trim();
+		if(name.equals("") || name.matches(".*\\d.*") || name.isEmpty()) {
+			name = "Annon";
+		}
 		System.out.println();
 		
 		// Welcomes the user
