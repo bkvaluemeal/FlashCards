@@ -81,6 +81,9 @@ public class FlashCards {
 		if(name.equals("") || name.matches(".*\\d.*") || name.isEmpty()) {
 			name = "Annon";
 		}
+		if(name.equals("Justin Willis")) {
+			name = "Creator";
+		}
 		System.out.println();
 		
 		// Welcomes the user
