@@ -1,5 +1,5 @@
 Flash Cards
 ========
-```
-This is a basic math flashcard “game” that will quiz the user on addition or subtraction problems with two 2-digit numbers.
-```
+
+This highly competitive text adventure quizzes the user on their math abilities.
+Test your brain and get the highest score!

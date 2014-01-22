@@ -1,5 +1,13 @@
-/* FlashCards.java
+/* Justin Willis
+ * 3 days spent
+ * 
+ * FlashCards.java
  * https://github.com/bkvaluemeal/FlashCards
+ * 
+ * Description:
+ * 	This highly competitive text adventure quizzes 
+ * 	the user on their math abilities. Test your 
+ * 	brain and get the highest score!
  */
 
 import java.util.Random;
@@ -83,49 +91,95 @@ public class FlashCards {
 			switch(gameMode) {
 			case 1:
 				answer = randA + randB;
-				System.out.print(randA + " + " + randB + " = ");
-				try {
-					if(Integer.parseInt(scanner.nextLine().trim()) == answer) {
-						score++;
-						correct();
-					} else {
-						lives--;
+				for(int i = 0; i < 2; i++) {
+					System.out.print(randA + " + " + randB + " = ");
+					try {
+						if(Integer.parseInt(scanner.nextLine().trim()) == answer) {
+							score++;
+							correct();
+							break;
+						} else if(i == 1) {
+							lives--;
+							System.out.println();
+							System.out.println("Sorry...");
+							System.out.println(randA + " + " + randB + " = " + answer);
+							System.out.println();
+							System.out.print("Press enter to continue...");
+							scanner.nextLine();
+						}
+					} catch(Exception e) {
+						
 					}
-				} catch(Exception e) {
-					
 				}
 				break;
 			case 2:
 				answer = randA - randB;
-				System.out.print(randA + " - " + randB + " = ");
-				try {
-					if(Integer.parseInt(scanner.nextLine().trim()) == answer) {
-						score++;
-						correct();
-					} else {
-						lives--;
+				for(int i = 0; i < 2; i++) {
+					System.out.print(randA + " - " + randB + " = ");
+					try {
+						if(Integer.parseInt(scanner.nextLine().trim()) == answer) {
+							score++;
+							correct();
+							break;
+						} else if(i == 1) {
+							lives--;
+							System.out.println();
+							System.out.println("Sorry...");
+							System.out.println(randA + " - " + randB + " = " + answer);
+							System.out.println();
+							System.out.print("Press enter to continue...");
+							scanner.nextLine();
+						}
+					} catch(Exception e) {
+						
 					}
-				} catch(Exception e) {
-					
 				}
 				break;
 			case 3:
 				if(addition) {
 					answer = randA + randB;
-					System.out.print(randA + " + " + randB + " = ");
+					for(int i = 0; i < 2; i++) {
+						System.out.print(randA + " + " + randB + " = ");
+						try {
+							if(Integer.parseInt(scanner.nextLine().trim()) == answer) {
+								score++;
+								correct();
+								break;
+							} else if(i == 1) {
+								lives--;
+								System.out.println();
+								System.out.println("Sorry...");
+								System.out.println(randA + " + " + randB + " = " + answer);
+								System.out.println();
+								System.out.print("Press enter to continue...");
+								scanner.nextLine();
+							}
+						} catch(Exception e) {
+							
+						}
+					}
 				} else {
 					answer = randA - randB;
-					System.out.print(randA + " - " + randB + " = ");
-				}
-				try {
-					if(Integer.parseInt(scanner.nextLine().trim()) == answer) {
-						score++;
-						correct();
-					} else {
-						lives--;
+					for(int i = 0; i < 2; i++) {
+						System.out.print(randA + " - " + randB + " = ");
+						try {
+							if(Integer.parseInt(scanner.nextLine().trim()) == answer) {
+								score++;
+								correct();
+								break;
+							} else if(i == 1) {
+								lives--;
+								System.out.println();
+								System.out.println("Sorry...");
+								System.out.println(randA + " - " + randB + " = " + answer);
+								System.out.println();
+								System.out.print("Press enter to continue...");
+								scanner.nextLine();
+							}
+						} catch(Exception e) {
+							
+						}
 					}
-				} catch(Exception e) {
-					
 				}
 				break;
 			}
