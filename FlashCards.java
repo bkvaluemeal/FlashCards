@@ -108,7 +108,15 @@ public class FlashCards {
 							scanner.nextLine();
 						}
 					} catch(Exception e) {
-						
+						if(i == 1) {
+							lives--;
+							System.out.println();
+							System.out.println("Sorry...");
+							System.out.println(randA + " + " + randB + " = " + answer);
+							System.out.println();
+							System.out.print("Press enter to continue...");
+							scanner.nextLine();
+						}
 					}
 				}
 				break;
@@ -131,7 +139,15 @@ public class FlashCards {
 							scanner.nextLine();
 						}
 					} catch(Exception e) {
-						
+						if(i == 1) {
+							lives--;
+							System.out.println();
+							System.out.println("Sorry...");
+							System.out.println(randA + " - " + randB + " = " + answer);
+							System.out.println();
+							System.out.print("Press enter to continue...");
+							scanner.nextLine();
+						}
 					}
 				}
 				break;
@@ -155,7 +171,15 @@ public class FlashCards {
 								scanner.nextLine();
 							}
 						} catch(Exception e) {
-							
+							if(i == 1) {
+								lives--;
+								System.out.println();
+								System.out.println("Sorry...");
+								System.out.println(randA + " + " + randB + " = " + answer);
+								System.out.println();
+								System.out.print("Press enter to continue...");
+								scanner.nextLine();
+							}
 						}
 					}
 				} else {
@@ -177,7 +201,15 @@ public class FlashCards {
 								scanner.nextLine();
 							}
 						} catch(Exception e) {
-							
+							if(i == 1) {
+								lives--;
+								System.out.println();
+								System.out.println("Sorry...");
+								System.out.println(randA + " - " + randB + " = " + answer);
+								System.out.println();
+								System.out.print("Press enter to continue...");
+								scanner.nextLine();
+							}
 						}
 					}
 				}
